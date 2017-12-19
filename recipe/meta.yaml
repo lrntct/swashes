@@ -1,0 +1,30 @@
+{% set name = "SWASHES" %}
+{% set version = "1.03.00" %}
+{% set renater_num = "4900" %}
+{% set sha256 = "05adfe317369e03821aaf424b25688fe416b055b88ddee78702769760689ca0d" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.zip
+  url: https://sourcesup.renater.fr/frs/download.php/file/{{ renater_num }}/{{ name }}-{{ version }}.zip
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+
+test:
+  commands:
+    - swashes 1 2 1 2 10
+
+about:
+  home: https://sourcesup.renater.fr/projects/swashes/
+  license: Cecill-V2
+  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
+  summary: "SWASHES = Shallow-Water Analytic Solutions for Hydraulic and Environmental Studies."
+
+extra:
+  recipe-maintainers:
+    - lrntct

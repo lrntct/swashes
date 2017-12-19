@@ -40,7 +40,7 @@ install:
   - "activate test"
   #~ # Install pip dependencies.
   #~ - "pip install %PIP_DEPENDENCIES_2%"
-  - "conda build recipe/"
+  - "conda-build recipe/"
 
 # Not a .NET project, we build in the install step instead
 build: false

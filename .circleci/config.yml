@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: install dependencies
-          command: conda install conda-build anaconda-client -q -y
+          command: conda install conda-build anaconda-client cmake -q -y
       - run: conda-build recipe
       # upload
       - run:

@@ -32,5 +32,5 @@ build: false
 
 on_success:
   # upload to anaconda cloud
-  - ps: & "anaconda" -t %Env:ANACONDA_TOKEN upload --force C:\conda\conda-bld\win-*\swashes-*.tar.bz2
+  - ps: Invoke-Expression "anaconda -t %Env:ANACONDA_TOKEN upload --force C:\conda\conda-bld\win-*\swashes-*.tar.bz2"
 

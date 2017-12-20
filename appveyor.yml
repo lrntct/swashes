@@ -28,14 +28,8 @@ install:
 
 build: false
 
-test_script:
-  # Check file format with clang
-  #- "%CMD_IN_ENV% activate format"
-  #- "%CMD_IN_ENV% python tools\\clangformatter.py src\\"
-  # Test built package
-  #- "%CMD_IN_ENV% activate test"
-  #- "%CMD_IN_ENV% run-swmm --version"
+artifacts:
+  - path: "C:\conda\conda-bld\*\swashes-*.tar.bz2"
 
-on_success:
-  #~ - "%CMD_IN_ENV% activate root"
-  #~ - "%CMD_IN_ENV% python tools\\build_and_upload.py"
+#~ on_success:
+

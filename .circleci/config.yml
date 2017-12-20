@@ -2,15 +2,15 @@ version: 2
 jobs:
   build:
     docker:
-      - image: continuumio/miniconda3:4.0.5
+      - image: continuumio/miniconda3
     working_directory: ~/repo
     steps:
       - checkout
       - run:
           name: install dependencies
           command: |
-            conda install conda-build anaconda-client cmake -q -y
-            conda install -c anaconda make gcc -q -y
+            conda install conda-build anaconda-client cmake -y
+            conda install -c anaconda make gcc -v -y
       - run: conda-build recipe
       # upload
       - run:

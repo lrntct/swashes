@@ -6,6 +6,8 @@ environment:
     # Environment variables used by astropy helpers
     PYTHON: "C:\\conda"
     CMD_IN_ENV: "cmd /E:ON /V:ON /C .\\ci-helpers\\appveyor\\windows_sdk.cmd"
+  ANACONDA_TOKEN:
+    secure: 8RgmvPc4Rfu1PELT7hOKi/a3d0zevmFKS8qL1ZdmCZb1Gx1X2pZPqOEoFqcWYDtm
 
   matrix:
     - PYTHON_VERSION: "3.4"
@@ -28,8 +30,7 @@ install:
 
 build: false
 
-artifacts:
-  - path: 'C:\conda\conda-bld\win-*\*.tar.bz2'
-
-#~ on_success:
+on_success:
+  # upload to anaconda cloud
+  - - python ci-tools\anaconda-upload.py
 

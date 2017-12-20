@@ -11,6 +11,8 @@ source:
   fn: {{ name }}-{{ version }}.zip
   url: https://sourcesup.renater.fr/frs/download.php/file/{{ renater_num }}/{{ name }}-{{ version }}.zip
   sha256: {{ sha256 }}
+  patches:
+    - swashes.patch
 
 build:
   number: 0

@@ -1,4 +1,3 @@
-# for some reason, obj is not created/extracted with conda-build
-mkdir -p obj
+cmake CMakeLists.txt
 make
 install -t $PREFIX/bin bin/swashes

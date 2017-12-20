@@ -29,7 +29,7 @@ install:
 build: false
 
 artifacts:
-  - path: "C:\conda\conda-bld\*\swashes-*.tar.bz2"
+  - path: 'C:\conda\conda-bld\win-*\*.tar.bz2'
 
 #~ on_success:
 

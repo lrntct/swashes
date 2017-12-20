@@ -17,9 +17,9 @@ source:
 build:
   number: 0
 
-test:
-  commands:
-    - swashes 1 2 1 2 10
+#~ test:
+  #~ commands:
+    #~ - swashes 1 2 1 2 10
 
 about:
   home: https://sourcesup.renater.fr/projects/swashes/

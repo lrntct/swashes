@@ -1,6 +1,6 @@
 diff -Naur /home/laurent/Downloads/SWASHES-1.03.00/CMakeLists.txt SWASHES-1.03.00/CMakeLists.txt
 --- /home/laurent/Downloads/SWASHES-1.03.00/CMakeLists.txt	1969-12-31 18:00:00.000000000 -0600
-+++ SWASHES-1.03.00/CMakeLists.txt	2017-12-19 18:53:21.622255430 -0600
++++ SWASHES-1.03.00/CMakeLists.txt	2017-12-20 08:45:35.317797639 -0600
 @@ -0,0 +1,33 @@
 +cmake_minimum_required (VERSION 3.0)
 +
@@ -10,7 +10,7 @@ diff -Naur /home/laurent/Downloads/SWASHES-1.03.00/CMakeLists.txt SWASHES-1.03.0
 +set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 +
 +if(UNIX)
-+    set(CMAKE_CXX_FLAGS "-g -Wall -pedantic -O3")
++    set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -g -Wall -pedantic -O3")
 +endif(UNIX)
 +
 +if(APPLE)

@@ -24,7 +24,6 @@ install:
   - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   # Install dependencies
   - "%CMD_IN_ENV% conda install conda-build anaconda-client -q -y"
-  - "%CMD_IN_ENV% conda install -c conda-forge make -q -y"
   - "%CMD_IN_ENV% conda-build recipe"
 
 build: false

@@ -118,3 +118,55 @@ diff -Naur /home/laurent/Downloads/SWASHES-1.03.00/Makefile SWASHES-1.03.00/Make
 -
 -cleanall: clean
 -	@rm -f $(BINDIR)/swashes
+diff -Naur /home/laurent/Downloads/SWASHES-1.03.00/Sources/bump.cpp SWASHES-1.03.00/Sources/bump.cpp
+--- /home/laurent/Downloads/SWASHES-1.03.00/Sources/bump.cpp	2016-01-29 09:19:31.000000000 -0600
++++ SWASHES-1.03.00/Sources/bump.cpp	2017-12-20 09:18:29.399587622 -0600
+@@ -53,6 +53,9 @@
+  * knowledge of the CeCILL license and that you accept its terms.
+  *
+  ******************************************************************************/
++#if defined(WIN32)
++#include <minmax.h>
++#endif
+ 
+ #include "bump.hpp"
+ 
+diff -Naur /home/laurent/Downloads/SWASHES-1.03.00/Sources/dressler_dam.cpp SWASHES-1.03.00/Sources/dressler_dam.cpp
+--- /home/laurent/Downloads/SWASHES-1.03.00/Sources/dressler_dam.cpp	2016-01-29 09:19:31.000000000 -0600
++++ SWASHES-1.03.00/Sources/dressler_dam.cpp	2017-12-20 09:18:20.943207675 -0600
+@@ -52,6 +52,9 @@
+  * knowledge of the CeCILL license and that you accept its terms.
+  *
+  ******************************************************************************/
++#if defined(WIN32)
++#include <minmax.h>
++#endif
+ 
+ #include "dressler_dam.hpp"
+ 
+diff -Naur /home/laurent/Downloads/SWASHES-1.03.00/Sources/inclined_plane.cpp SWASHES-1.03.00/Sources/inclined_plane.cpp
+--- /home/laurent/Downloads/SWASHES-1.03.00/Sources/inclined_plane.cpp	2016-01-29 09:19:31.000000000 -0600
++++ SWASHES-1.03.00/Sources/inclined_plane.cpp	2017-12-20 09:18:25.611417595 -0600
+@@ -53,6 +53,9 @@
+  * knowledge of the CeCILL license and that you accept its terms.
+  *
+  ******************************************************************************/
++#if defined(WIN32)
++#include <minmax.h>
++#endif
+ 
+ #include "inclined_plane.hpp"
+ 
+diff -Naur /home/laurent/Downloads/SWASHES-1.03.00/Sources/swash.cpp SWASHES-1.03.00/Sources/swash.cpp
+--- /home/laurent/Downloads/SWASHES-1.03.00/Sources/swash.cpp	2016-01-29 09:19:31.000000000 -0600
++++ SWASHES-1.03.00/Sources/swash.cpp	2017-12-20 09:18:16.158992072 -0600
+@@ -52,6 +52,9 @@
+  * knowledge of the CeCILL license and that you accept its terms.
+  *
+  ******************************************************************************/
++#if defined(WIN32)
++#include <minmax.h>
++#endif
+ 
+ #include "swash.hpp"
+ 

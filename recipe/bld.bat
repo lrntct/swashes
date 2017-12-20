@@ -1,3 +1,3 @@
 cmake.exe CMakeLists.txt
 cmake.exe --build . --config Release
-COPY bin\swashes %PREFIX%\bin
+COPY bin\Release\swashes.exe %PREFIX%\bin

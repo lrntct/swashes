@@ -5,11 +5,15 @@ import traceback
 
 token = os.environ['ANACONDA_TOKEN']
 
-#~ package_glob = ""
-#~ path_glob = os.path.join("..", "..", "**", package_glob)
+file_glob = "swashes-*.tar.bz2"
+
+# set the path depending on the CI environment
+if os.environ.get('APPVEYOR'):
+    python_arch = os.environ.get('PYTHON_ARCH')
+    path_glob = "C:\conda\conda-bld\win-{}\{}".format(python_arch,file_glob)
 
 cmd = ['anaconda', '-t', token, 'upload', '--force']
-packages = glob.glob("../../**/swashes-*.tar.bz2", recursive=True)
+packages = glob.glob(path_glob, recursive=True)
 cmd.extend(packages)
 try:
     subprocess.check_call(cmd)

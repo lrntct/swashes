@@ -9,8 +9,8 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            apt-get install -y build-essential
             conda install conda-build anaconda-client cmake -y
-            conda install -c anaconda make gcc -v -y
       - run: conda-build recipe
       # upload
       - run:

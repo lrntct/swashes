@@ -32,6 +32,6 @@ build: false
 
 on_success:
   # upload to anaconda cloud
-  - cmd: echo %cd%
-  - cmd: anaconda -t %ANACONDA_TOKEN% upload --force C:\conda\conda-bld\win-$PYTHON_ARCH$\swashes-*.tar.bz2
+  #~ - cmd: echo %cd%
+  - cmd: python ci-tools/anaconda-upload.py
 

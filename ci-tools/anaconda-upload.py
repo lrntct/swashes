@@ -13,8 +13,8 @@ file_glob = "swashes-*.tar.bz2"
 if os.environ.get('APPVEYOR'):
     python_arch = os.environ.get('PYTHON_ARCH')
     path_glob = "C:\conda\conda-bld\win-{}\{}".format(python_arch,file_glob)
-else:
-    path_glob = "./**/{}".format(file_glob)
+elif os.environ.get('CIRCLECI'):
+    path_glob = "/opt/conda/conda-bld/linux-64/{}".format(file_glob)
 
 cmd = ['anaconda', '-t', token, 'upload', '--force']
 packages = glob.glob(path_glob, recursive=True)

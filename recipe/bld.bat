@@ -1,3 +1,3 @@
-MKDIR obj
-gnumake.exe -e CC=msvc
+cmake.exe CMakeLists.txt
+gnumake.exe
 COPY bin\swashes %PREFIX%\bin

@@ -3,4 +3,4 @@
 [![Anaconda-Server Badge](https://anaconda.org/lrntct/swashes/badges/installer/conda.svg)](https://anaconda.org/lrntct/swashes)
 
 This is a conda recipe for the [SWASHES software](https://sourcesup.renater.fr/projects/swashes/).
-
+Conda packages for Windws and Linux are build and uploaded to Anaconda cloud automatically with AppVeyor and CircleCI, respectivelly.
